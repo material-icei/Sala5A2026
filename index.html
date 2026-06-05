@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesoros del Pasado · Sala de 5 "A" · ICEI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Partículas de fondo -->
+  <div class="particles" id="particles"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-deco deco-sun">☀️</div>
+    <div class="hero-deco deco-star1">⭐</div>
+    <div class="hero-deco deco-star2">🌟</div>
+    <div class="hero-deco deco-gem">💎</div>
+
+    <div class="chest-wrap">
+      <div class="chest" aria-hidden="true">🏺</div>
+    </div>
+
+    <div class="hero-content">
+      <p class="school-tag">🏫 Sala de 5 años · Colegio ICEI</p>
+      <h1>
+        <span class="title-line1">Tesoros</span>
+        <span class="title-line2">del Pasado</span>
+      </h1>
+      <p class="hero-subtitle">
+        ¡Viajamos por la historia y creamos cosas increíbles! 🗺️<br/>
+        Mirá todo lo que hicimos durante el año.
+      </p>
+      <a href="#videos" class="btn-hero">
+        <span>Ver nuestros tesoros</span>
+        <span class="btn-icon">👇</span>
+      </a>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-main)"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-card">
+        <span class="intro-emoji">🔍</span>
+        <div>
+          <h2>¿De qué se trató el proyecto?</h2>
+          <p>
+            Durante abril, mayo y junio exploramos los grandes misterios de la humanidad.
+            Conocimos a los primeros pobladores, los majestuosos egipcios, los sabios griegos
+            y los poderosos romanos. ¡Y dejamos todo registrado en videos súper creativos!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIVILIZACIONES / VIDEOS -->
+  <section class="videos-section" id="videos">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-title-emoji">🎬</span>
+        Nuestros videos
+      </h2>
+      <p class="section-subtitle">Hacé clic en cada tarjeta para ver el video</p>
+
+      <div class="cards-grid">
+
+        <!-- PREHISTORIA -->
+        <div class="civ-card" data-civ="prehistoria">
+          <div class="card-badge ready">✅ Listo</div>
+          <div class="card-emoji-wrap">
+            <span class="card-emoji">🦴</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Prehistoria</h3>
+            <p class="card-desc">
+              Imágenes animadas con la poesía<br/>
+              <em>"Primeros Pobladores"</em>
+            </p>
+            <div class="card-tag">🎤 Poesía + Imágenes</div>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1XI5J0Gv-bf2W5yd8qesrGZN_6eyUNTQC/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-btn"
+            aria-label="Ver video de Prehistoria"
+          >
+            ▶ Ver video
+          </a>
+        </div>
+
+        <!-- ANTIGUO EGIPTO -->
+        <div class="civ-card" data-civ="egipto">
+          <div class="card-badge ready">✅ Listo</div>
+          <div class="card-emoji-wrap">
+            <span class="card-emoji">🐫</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Antiguo Egipto</h3>
+            <p class="card-desc">
+              Stop motion con un divertido<br/>
+              <em>limerick egipcio</em>
+            </p>
+            <div class="card-tag">🎭 Stop Motion</div>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1hQ1xuEGRsWvH4K3IWUWtG8ObtBaHSPZH/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-btn"
+            aria-label="Ver video de Antiguo Egipto"
+          >
+            ▶ Ver video
+          </a>
+        </div>
+
+        <!-- GRECIA -->
+        <div class="civ-card coming-soon" data-civ="grecia">
+          <div class="card-badge soon">🔒 Próximamente</div>
+          <div class="card-emoji-wrap">
+            <span class="card-emoji">🏛️</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Grecia</h3>
+            <p class="card-desc">
+              ¡Estamos terminando<br/>nuestra obra maestra!
+            </p>
+            <div class="card-tag">⏳ En preparación</div>
+          </div>
+          <div class="card-btn disabled" aria-disabled="true">
+            🔒 ¡Muy pronto!
+          </div>
+        </div>
+
+        <!-- ROMA -->
+        <div class="civ-card coming-soon" data-civ="roma">
+          <div class="card-badge soon">🔒 Próximamente</div>
+          <div class="card-emoji-wrap">
+            <span class="card-emoji">⚔️</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Roma</h3>
+            <p class="card-desc">
+              Los legionarios también<br/>tienen algo que mostrar…
+            </p>
+            <div class="card-tag">⏳ En preparación</div>
+          </div>
+          <div class="card-btn disabled" aria-disabled="true">
+            🔒 ¡Muy pronto!
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE de civilizaciones -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-title-emoji">⏳</span>
+        Nuestro viaje en el tiempo
+      </h2>
+      <div class="timeline">
+        <div class="tl-item" data-delay="0">
+          <div class="tl-dot">🦴</div>
+          <div class="tl-content">
+            <strong>Prehistoria</strong>
+            <span>Los primeros humanos</span>
+          </div>
+        </div>
+        <div class="tl-item" data-delay="1">
+          <div class="tl-dot">🐫</div>
+          <div class="tl-content">
+            <strong>Antiguo Egipto</strong>
+            <span>Faraones y pirámides</span>
+          </div>
+        </div>
+        <div class="tl-item" data-delay="2">
+          <div class="tl-dot">🏛️</div>
+          <div class="tl-content">
+            <strong>Grecia</strong>
+            <span>Dioses y filósofos</span>
+          </div>
+        </div>
+        <div class="tl-item" data-delay="3">
+          <div class="tl-dot">⚔️</div>
+          <div class="tl-content">
+            <strong>Roma</strong>
+            <span>Emperadores y coliseos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-stars">⭐🌟✨🌟⭐</div>
+      <p class="footer-school">🏫 Sala de 5 años · Colegio ICEI</p>
+      <p class="footer-teachers">Docentes: Aldana Videla &amp; Fernanda García</p>
+      <p class="footer-year">ABP "Tesoros del Pasado" · 2026</p>
+      <div class="footer-emojis">🦴 🐫 🏛️ ⚔️</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

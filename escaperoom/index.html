@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏺 Sala de Escape — Tesoros del Pasado</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PANTALLA: INTRO
+══════════════════════════════════════════ -->
+<div id="screen-intro" class="screen active">
+  <div class="particles" id="intro-particles"></div>
+  <div class="intro-wrap">
+    <div class="chest-anim">🏺</div>
+    <h1 class="logo-title">Tesoros<br/><span>del Pasado</span></h1>
+    <p class="intro-subtitle">🗺️ ¡Una sala de escape por la historia!</p>
+    <p class="intro-desc">
+      Viajá por 4 civilizaciones antiguas, resolvé los acertijos
+      y completá la <strong>Línea del Tiempo</strong> para liberar los tesoros.
+    </p>
+    <div class="intro-civs">
+      <span>🦴 Prehistoria</span>
+      <span>🐫 Egipto</span>
+      <span>🏛️ Grecia</span>
+      <span>⚔️ Roma</span>
+    </div>
+    <button class="btn-primary" onclick="Game.start()">¡Comenzar la aventura! 🚀</button>
+    <p class="school-tag">Sala de 5 años · Colegio ICEI · A. Videla &amp; F. García</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PANTALLA: JUEGO
+══════════════════════════════════════════ -->
+<div id="screen-game" class="screen">
+
+  <!-- HUD top -->
+  <div class="hud">
+    <div class="hud-level">
+      <span class="hud-emoji" id="hud-emoji">🦴</span>
+      <span id="hud-civ">Prehistoria</span>
+    </div>
+    <div class="hud-progress">
+      <span id="hud-q">Acertijo 1 / 3</span>
+      <div class="hud-dots" id="hud-dots"></div>
+    </div>
+    <button class="btn-timeline-peek" onclick="Timeline.toggle()">⏳ Línea del Tiempo</button>
+  </div>
+
+  <!-- TIMELINE drawer -->
+  <div class="timeline-drawer" id="timeline-drawer">
+    <div class="timeline-inner">
+      <h3>🗺️ Tu línea del tiempo</h3>
+      <div class="tl-track" id="tl-track">
+        <!-- items injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PUZZLE STAGE -->
+  <div class="stage" id="stage">
+    <!-- puzzles rendered here -->
+  </div>
+
+  <!-- FEEDBACK overlay -->
+  <div class="feedback-overlay hidden" id="feedback-overlay">
+    <div class="feedback-box" id="feedback-box">
+      <div class="feedback-emoji" id="feedback-emoji"></div>
+      <p class="feedback-msg" id="feedback-msg"></p>
+      <button class="btn-primary" id="feedback-btn" onclick="Game.nextPuzzle()">Siguiente →</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     PANTALLA: VICTORIA
+══════════════════════════════════════════ -->
+<div id="screen-win" class="screen">
+  <div class="win-wrap">
+    <div class="win-trophy">🏆</div>
+    <h2 class="win-title">¡Felicitaciones!<br/>¡Liberaste todos los tesoros!</h2>
+    <p class="win-sub">Completaste la Línea del Tiempo de la humanidad 🌍</p>
+
+    <div class="win-timeline">
+      <div class="wtl-item"><span class="wtl-dot">🦴</span><div><strong>Prehistoria</strong><em>Los primeros humanos</em></div></div>
+      <div class="wtl-connector"></div>
+      <div class="wtl-item"><span class="wtl-dot">🐫</span><div><strong>Antiguo Egipto</strong><em>Faraones y pirámides</em></div></div>
+      <div class="wtl-connector"></div>
+      <div class="wtl-item"><span class="wtl-dot">🏛️</span><div><strong>Grecia</strong><em>Dioses y filósofos</em></div></div>
+      <div class="wtl-connector"></div>
+      <div class="wtl-item"><span class="wtl-dot">⚔️</span><div><strong>Roma</strong><em>Emperadores y coliseos</em></div></div>
+    </div>
+
+    <button class="btn-primary" onclick="Game.restart()">🔄 Jugar de nuevo</button>
+    <p class="school-tag">Sala de 5 · Colegio ICEI · 2025</p>
+  </div>
+</div>
+
+<script src="puzzles.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

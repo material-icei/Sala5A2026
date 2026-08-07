@@ -420,6 +420,135 @@ a.card-btn:hover {
 }
 
 /* ============================================
+   SALA DE ESCAPE
+   ============================================ */
+.escape-section {
+  padding: 0 0 70px;
+}
+
+.escape-card {
+  background: linear-gradient(135deg, #1A2620 0%, #2E3A2A 60%, #3A4A30 100%);
+  border-radius: 28px;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 12px 48px rgba(26,38,32,.35);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left column */
+.escape-left { flex: 1; min-width: 0; }
+
+.escape-icons {
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: 14px;
+  animation: escIcons 3s ease-in-out infinite alternate;
+}
+@keyframes escIcons {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-6px); }
+}
+
+.escape-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: var(--gold-light);
+  margin-bottom: 14px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 0 var(--gold-dark);
+}
+
+.escape-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.8);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.escape-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.escape-badges span {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.85);
+  font-weight: 700;
+  font-size: .85rem;
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+/* CTA button */
+.btn-escape {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  color: #1A2620;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.25rem;
+  padding: 16px 38px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(232,160,16,.45);
+  transition: transform .22s, box-shadow .22s, filter .22s;
+}
+.btn-escape:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(232,160,16,.55);
+  filter: brightness(1.08);
+}
+.btn-escape:active { transform: translateY(1px); }
+.btn-escape-arrow {
+  font-size: 1.4rem;
+  transition: transform .2s;
+}
+.btn-escape:hover .btn-escape-arrow { transform: translateX(5px); }
+
+/* Right column — decorative trophy */
+.escape-right {
+  flex-shrink: 0;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.escape-chest {
+  font-size: 6rem;
+  animation: chestBounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 24px rgba(245,200,66,.5));
+  line-height: 1;
+}
+.escape-deco {
+  position: absolute;
+  font-size: 1.6rem;
+  animation: heroDeco 3.5s ease-in-out infinite alternate;
+}
+.ed1 { top: 0; right: 0;  animation-delay: 0s; }
+.ed2 { top: 10px; left: 0; animation-delay: .6s; font-size: 1.2rem; }
+.ed3 { bottom: 4px; right: 12px; animation-delay: 1.1s; font-size: 1.3rem; }
+
+@media (max-width: 640px) {
+  .escape-card {
+    flex-direction: column;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .escape-badges { justify-content: center; }
+  .escape-right { width: 100px; height: 100px; }
+  .escape-chest { font-size: 4.5rem; }
+}
+
+/* ============================================
    TIMELINE
    ============================================ */
 .timeline-section {

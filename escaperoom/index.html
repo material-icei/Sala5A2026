@@ -38,7 +38,7 @@
 <!-- ══════════════════════════════════════════
      PANTALLA: JUEGO
 ══════════════════════════════════════════ -->
-<div id="screen-game" class="screen">
+<div id="screen-game" class="screen" style="display:none">
 
   <!-- HUD top -->
   <div class="hud">
@@ -57,32 +57,57 @@
   <div class="timeline-drawer" id="timeline-drawer">
     <div class="timeline-inner">
       <h3>🗺️ Tu línea del tiempo</h3>
-      <div class="tl-track" id="tl-track">
-        <!-- items injected by JS -->
-      </div>
+      <div class="tl-track" id="tl-track"></div>
     </div>
   </div>
 
   <!-- PUZZLE STAGE -->
-  <div class="stage" id="stage">
-    <!-- puzzles rendered here -->
-  </div>
+  <div class="stage" id="stage"></div>
 
   <!-- FEEDBACK overlay -->
   <div class="feedback-overlay hidden" id="feedback-overlay">
     <div class="feedback-box" id="feedback-box">
       <div class="feedback-emoji" id="feedback-emoji"></div>
       <p class="feedback-msg" id="feedback-msg"></p>
-      <button class="btn-primary" id="feedback-btn" onclick="Game.nextPuzzle()">Siguiente →</button>
+      <button class="btn-primary" id="feedback-btn">Siguiente →</button>
     </div>
   </div>
 
 </div>
 
 <!-- ══════════════════════════════════════════
+     PANTALLA: TRANSICIÓN DE NIVEL
+══════════════════════════════════════════ -->
+<div id="screen-level" class="screen" style="display:none">
+  <div class="level-wrap">
+
+    <div class="level-badge-wrap">
+      <div class="level-badge-ring"></div>
+      <div class="level-badge" id="level-badge">🦴</div>
+    </div>
+
+    <h2 class="level-title" id="level-title">¡Nivel completado!</h2>
+    <p class="level-subtitle" id="level-subtitle">Desbloqueaste un nuevo tesoro en la línea del tiempo</p>
+    <p class="level-fact" id="level-fact"></p>
+
+    <!-- Línea del tiempo progresiva -->
+    <div class="level-timeline-wrap">
+      <h3 class="ltl-heading">🗺️ Línea del Tiempo</h3>
+      <div class="level-timeline" id="level-timeline"></div>
+    </div>
+
+    <button class="btn-level-next" id="level-next-btn" onclick="Game.goNextLevel()">
+      <span id="level-next-label">¡Siguiente civilización!</span>
+      <span id="level-next-emoji" class="btn-next-emoji">→</span>
+    </button>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
      PANTALLA: VICTORIA
 ══════════════════════════════════════════ -->
-<div id="screen-win" class="screen">
+<div id="screen-win" class="screen" style="display:none">
   <div class="win-wrap">
     <div class="win-trophy">🏆</div>
     <h2 class="win-title">¡Felicitaciones!<br/>¡Liberaste todos los tesoros!</h2>
@@ -107,3 +132,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+

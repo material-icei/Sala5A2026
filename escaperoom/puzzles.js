@@ -248,8 +248,9 @@ const LEVELS = [
         instruction: "🔍 Acertijo 3 — Uní cada imagen con su civilización",
         question: "¿A qué civilización pertenece cada imagen? Uní imagen con civilización:",
         pairs: [
-          { img: IMG("cueva"), label: "Caverna", desc: "Prehistoria ⚔️" },
-          { img: IMG("piramide"),       label: "Piramide",       desc: "Egipto ⚔️" },
+          { img: IMG("cueva"), label: "Caverna", desc: "Prehistoria 🦴" },
+          { img: IMG("piramide"),       label: "Piramide",       desc: "Egipto 🐫" },
+          { img: IMG("partenon"),    label: "Partenón",     desc: "Grecia ⚡" },          
           { img: IMG("coliseo"),         label: "Coliseo",         desc: "Roma ⚔️" }
         ],
         funFact: "¡Bravo! Sabés un montón sobre historia antigua"

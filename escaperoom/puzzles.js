@@ -174,9 +174,9 @@ const LEVELS = [
         instruction: "🔍 Acertijo 2 — Ordená del más grande al más pequeño",
         question: "Arrastrá las imágenes para ordenar: primero el hogar de los dioses, después el templo de Atenea, y por último el propio dios:",
         items: [
-          { id: "olimpo",   img: IMG("monte-olimpo"), label: "Monte Olimpo\n(hogar de los dioses)" },
-          { id: "partenon", img: IMG("partenon"),     label: "Partenón\n(templo de Atenea)" },
-          { id: "zeus",     img: IMG("zeus"),         label: "Zeus\n(rey de los dioses)" }
+          { id: "olimpo",   img: IMG("monte-olimpo"), label: "Monte Olimpo\n" },
+          { id: "partenon", img: IMG("partenon"),     label: "Partenón\n" },
+          { id: "zeus",     img: IMG("zeus"),         label: "Zeus\n" }
         ],
         correctOrder: ["olimpo","partenon","zeus"],
         funFact: "¡Muy bien! El MONTE OLIMPO era donde vivían todos los dioses. El PARTENÓN era el templo construido para Atenea en Atenas. Y ZEUS era el dios más poderoso de todos. 🏔️"

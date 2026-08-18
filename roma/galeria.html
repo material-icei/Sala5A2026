@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Roma · Tesoros del Pasado · ICEI</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="galeria.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Partículas de fondo -->
+  <div class="particles" id="particles"></div>
+
+  <!-- HERO -->
+  <header class="hero-roma">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="hero-deco deco-1">⚔️</div>
+    <div class="hero-deco deco-2">🛡️</div>
+    <div class="hero-deco deco-3">🏛️</div>
+    <div class="hero-deco deco-4">⭐</div>
+
+    <div class="chest-wrap">
+      <div class="chest" aria-hidden="true">⚔️</div>
+    </div>
+
+    <div class="hero-content">
+      <p class="school-tag">🏫 Sala de 5 años "A" · Colegio ICEI</p>
+      <h1>
+        <span class="title-line1">Roma</span>
+        <span class="title-line2">Galería de Fotos</span>
+      </h1>
+      <p class="hero-subtitle">
+        ¡Nos convertimos en legionarios y ciudadanos romanos! 🏟️<br/>
+        Mirá todas las fotos de nuestra aventura por el Imperio.
+      </p>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-main)"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- GALERÍA -->
+  <section class="roma-gallery-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="section-title-emoji">📸</span>
+        Nuestras fotos en Roma
+      </h2>
+      <p class="section-subtitle">Tocá una foto para verla en grande</p>
+
+      <div class="roma-photo-grid" id="romaPhotoGrid">
+        <div class="roma-photo-card" data-index="0">
+          <img src="galeria/foto1.jpg" alt="Chicos y chicas disfrazados de romanos frente al Coliseo" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+        <div class="roma-photo-card" data-index="1">
+          <img src="galeria/foto2.jpg" alt="Chicos disfrazados de gladiadores frente al Coliseo" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+        <div class="roma-photo-card" data-index="2">
+          <img src="galeria/foto3.jpg" alt="Chicos disfrazados de patricios romanos en el Foro" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+        <div class="roma-photo-card" data-index="3">
+          <img src="galeria/foto4.jpg" alt="Chicos disfrazados de romanos caminando por el Foro" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+        <div class="roma-photo-card" data-index="4">
+          <img src="galeria/foto5.jpg" alt="Chicos disfrazados de romanos posando frente al Coliseo" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+        <div class="roma-photo-card" data-index="5">
+          <img src="galeria/foto6.jpg" alt="Chicos disfrazados de romanos sonriendo en el Foro" loading="lazy" />
+          <div class="roma-photo-overlay"><span>🔍 Ver</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="roma-lightbox" id="romaLightbox">
+    <div class="roma-lightbox-inner">
+      <img id="romaLightboxImg" src="" alt="" />
+    </div>
+    <button class="roma-lightbox-close" id="romaLightboxClose" aria-label="Cerrar">✕</button>
+    <button class="roma-lightbox-prev" id="romaLightboxPrev" aria-label="Anterior">‹</button>
+    <button class="roma-lightbox-next" id="romaLightboxNext" aria-label="Siguiente">›</button>
+    <div class="roma-lightbox-counter" id="romaLightboxCounter">1 / 6</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-stars">⭐🌟✨🌟⭐</div>
+      <p class="footer-school">🏫 Sala de 5 años "A" · Colegio ICEI</p>
+      <p class="footer-teachers">Docente: Aldana Videla</p>
+      <p class="footer-year">ABP "Tesoros del Pasado" · 2026</p>
+      <div class="footer-emojis">🦴 🐫 🏛️ ⚔️</div>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Partículas de fondo ---------- */
+    (function () {
+      const container = document.getElementById('particles');
+      if (!container) return;
+      const emojis = ['⚔️', '🛡️', '🏛️', '⭐', '🏺'];
+      const total = window.innerWidth < 600 ? 10 : 18;
+      for (let i = 0; i < total; i++) {
+        const el = document.createElement('span');
+        el.className = 'particle';
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = 10 + Math.random() * 14 + 's';
+        el.style.animationDelay = Math.random() * 10 + 's';
+        container.appendChild(el);
+      }
+    })();
+
+    /* ---------- Animación de entrada de las tarjetas ---------- */
+    (function () {
+      const cards = document.querySelectorAll('.roma-photo-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 60);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      cards.forEach(card => observer.observe(card));
+    })();
+
+    /* ---------- Lightbox a pantalla completa ---------- */
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.roma-photo-card'));
+      const photos = cards.map(card => ({
+        src: card.querySelector('img').src,
+        alt: card.querySelector('img').alt
+      }));
+
+      const lightbox = document.getElementById('romaLightbox');
+      const lightboxImg = document.getElementById('romaLightboxImg');
+      const counter = document.getElementById('romaLightboxCounter');
+      const btnClose = document.getElementById('romaLightboxClose');
+      const btnPrev = document.getElementById('romaLightboxPrev');
+      const btnNext = document.getElementById('romaLightboxNext');
+
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightbox() {
+        const photo = photos[currentIndex];
+        lightboxImg.src = photo.src;
+        lightboxImg.alt = photo.alt;
+        counter.textContent = (currentIndex + 1) + ' / ' + photos.length;
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+        updateLightbox();
+      }
+      function showNext() {
+        currentIndex = (currentIndex + 1) % photos.length;
+        updateLightbox();
+      }
+
+      cards.forEach((card, i) => {
+        card.addEventListener('click', () => openLightbox(i));
+      });
+
+      btnClose.addEventListener('click', closeLightbox);
+      btnPrev.addEventListener('click', showPrev);
+      btnNext.addEventListener('click', showNext);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      });
+
+      /* Swipe táctil para mobile */
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 40) {
+          diff > 0 ? showPrev() : showNext();
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
